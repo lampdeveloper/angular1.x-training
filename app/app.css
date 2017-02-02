@@ -1,25 +1,143 @@
 /* app css stylesheet */
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+body {
+  background: #FFFFFF;
+  color: #ddd;
 }
 
-.menu:before {
-  content: "[";
+img:first-child {
+  width: 100%;
+  margin: 20px 0 5px;
 }
 
-.menu:after {
-  content: "]";
+.hoverwell:hover {
+  background-color: #52575c;
+  cursor: pointer;
+}
+select, textarea {
+  color: #52575c;
 }
 
-.menu > li {
-  display: inline;
+.well-title {
+  margin-top: 0px;
 }
 
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+.session {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #000;
+}
+
+ul.thumbnails {
+  list-style-type: none;
+  margin-top: 15px;
+}
+
+/* Common well styles, see widgets styles */
+
+li .well {
+  background: #808080;
+  color: #FFFFFF;
+}
+
+ul.event-details li .well {
+  margin-right: 30px;
+}
+
+div.session-details {
+  padding: 0 15px;
+}
+
+select + span {
+  margin-left: 20px;
+}
+
+.votingWidget {
+  padding: 0px;
+  height: 65px;
+  min-width: 44px;
+  width: 4%;
+  right: 15px;
+}
+
+.votingButton {
+  text-align: center;
+  width: 40%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+
+/* Bootstrap */
+
+.navbar.navbar-static-top {
+  background-color: #004D29;
+  border-color: #080808;
+  background-image: initial;  /* Note, Bootstrap uses a background image! */
+}
+
+
+.badge {
+  padding: 5px;
+  width: 100%;
+  background-color: initial;
+}
+
+/* NewEvent.html Styles */
+
+form input[id*="event"] {
+  margin-bottom: 10px;
+  border: 2px solid #005500;
+  color: black;
+}
+
+form input[id*="event"].ng-invalid.ng-dirty {
+  background-color: lightpink;
+  border-color: red;
+}
+
+input#eventLocation,
+input#eventImageUrl {
+  min-width: 360px;
+}
+
+input#eventCity {
+  margin-right: 8px;
+}
+form label{
+    color:#000;
+}
+/* EventList.html Styles */
+
+ul.event-list li .well {
+  min-height: 140px;
+  padding-top: 0;
+  margin-right: 30px;
+}
+
+ul.event-list li .well:hover {
+  background-color:  #CCCCCC;
+  color: #000000;
+}
+
+ul.event-list li .row {
+  margin-left: 0;
+}
+
+/*Event Details*/
+.panel-body {
+    color: #000;
+}
+
+h3{
+    padding: 8px;
+    background: rgba(23,23,23,0.85);
+    color: #fff;
+}
+.navbar-nav>li>a{
+    color: #333;
 }
