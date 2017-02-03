@@ -1,4 +1,4 @@
-eventsApp.controller('events', function($scope, Events) {
+eventsApp.controller('events', function($scope, Events, Sessions) {
     // Save
    $scope.saveEvent = function (event, newEventForm) {
         if (newEventForm.$valid) {

@@ -1,9 +1,6 @@
 'use strict';
 eventsApp.service('Events', function ($q, $http, API_URL) {
     var Events = {};
-    console.log('API_URL:');
-    console.log(API_URL);
-
     Events.get = function (id) {
         if (!id) {
             throw 'Missing parameter "id"';
