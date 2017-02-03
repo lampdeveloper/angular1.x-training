@@ -4,7 +4,7 @@
 var apiUrl = "http://0.0.0.0:3000/api/";
 var eventsApp = angular.module('eventsApp', ['ngRoute'])
         .config(function ($routeProvider, $locationProvider) {
-            $routeProvider.when('/admin/dashboard', {
+            $routeProvider.when('/newEvent', {
                 templateUrl: 'templates/new-event.html',
                 controller: 'newEventCtrl'
             });

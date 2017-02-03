@@ -17,4 +17,11 @@ console.log($route.current.locals.eventDetails);
     $scope.reload = function () {
         $route.reload();
     };
+    $scope.upVote = function (session) {
+        session.upVoteCount++;
+    };
+
+    $scope.downVote = function (session) {
+        session.upVoteCount--;
+    };
 });
