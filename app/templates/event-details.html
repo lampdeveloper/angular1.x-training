@@ -39,25 +39,18 @@
     </select>
     <ul class="event-details thumbnails">
         <li ng-repeat="session in event.sessions| orderBy:sortOrder | filter:query" id="session{{session.id}}">
-            <div class="well col-sm-1 votingWidget">
-                <div class="votingButton" ng-click="upVote(session)">
-                    <i class="glyphicon glyphicon-chevron-up icon-white"></i>
-                </div>
-                <div class="badge badge-inverse">
-                    <div>{{session.upVoteCount}}</div>
-                </div>
-                <div class="votingButton" ng-click="downVote(session)">
-                    <span class="glyphicon glyphicon-chevron-down icon-white"></span>
-                </div>
-            </div>
+            <vote upvote="upVote(session)" downvote="downVote(session)" count="{{session.upVoteCount}}" alert="alert()"></vote>
             <div class="row session">
                 <div class="well col-sm-9 session-details">
-                    <h4>{{session.name}}</h4> 
-                    <h5><strong>Speaker: </strong>{{session.creatorName}}</h5>
-                    <h5><strong>Duration: </strong>{{session.duration}}</h5>
-                    <h5><strong>Level: </strong>{{session.level}}</h5>
-                    <h5><strong>Abstract: </strong></h5>
-                    <p>{{session.abstract}}</p>
+                    <collapsible name="{{session.name}}">
+                        <h5><strong>Speaker: </strong>{{session.creatorName}}</h5>
+                        <demo1>
+                        <h5><strong>Duration: </strong>{{session.duration}}</h5>
+                        </demo1>
+                        <h5><strong>Level: </strong>{{session.level}}</h5>
+                        <h5><strong>Abstract: </strong></h5>
+                        <p>{{session.abstract}}</p>
+                    </collapsible>
                 </div>
         </li>
     </ul>

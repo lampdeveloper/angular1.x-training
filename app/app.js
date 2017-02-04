@@ -12,6 +12,9 @@ var eventsApp = angular.module('eventsApp', ['ngRoute'])
                 templateUrl: 'templates/event-list.html',
                 controller: 'eventListCtrl'
             });
+            $routeProvider.when('/sampleDirective', {
+                templateUrl: 'templates/sample-directive.html'
+            });
             $routeProvider.when('/eventDetails/:eventId/', {
                 foo: 'bar',
                 templateUrl: 'templates/event-details.html',

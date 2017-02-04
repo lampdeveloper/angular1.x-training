@@ -24,4 +24,7 @@ console.log($route.current.locals.eventDetails);
     $scope.downVote = function (session) {
         session.upVoteCount--;
     };
+    $scope.alert = function() {
+        alert('DDDD');
+    };
 });
